@@ -9,6 +9,12 @@ export default function Document() {
           name="description"
           content="Tim Cavey's Web Developer Portfolio. Full stack development demo and contact form."
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <body>
         <Main />

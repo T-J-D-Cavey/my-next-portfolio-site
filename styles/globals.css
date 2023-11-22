@@ -1,15 +1,22 @@
-/* CSS Reset from  https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* >>----> Variables */
+
+:root {
+  --font-family-main: 'Exo 2', sans-serif;
+}
+
+/* >>----> CSS Reset from  https://www.joshwcomeau.com/css/custom-css-reset/ */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 * {
   margin: 0;
+  line-height: calc(1em + 0.5rem);
 }
 
 body {
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: var(--font-family-main);
   /* add in here my body font family */
 }
 
@@ -26,6 +33,6 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-#root, #__next {
+#__next {
   isolation: isolate;
 }
