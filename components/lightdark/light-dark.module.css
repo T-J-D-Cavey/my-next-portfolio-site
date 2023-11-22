@@ -1,0 +1,16 @@
+.modeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0; 
+    right: 0;
+    z-index: 100;
+    margin-top: -5px;
+    margin-right: -5px;
+    border-bottom-left-radius: 50%;
+  }
+  .modeButton > img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }

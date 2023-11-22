@@ -1,4 +1,4 @@
-export const modeStyles = {
+export const modeStyles: Record<string, any> = {
     darkMode: {
       ctaButton: 'light',
       secondaryButton: 'outline-light',
