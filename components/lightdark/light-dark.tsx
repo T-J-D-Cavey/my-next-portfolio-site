@@ -10,9 +10,7 @@ type LightDarkButtonProps = {
     modeStyles: Record<string, any>
 }
 
-export default function LightDarkButton(props: LightDarkButtonProps) {
-
-    const {mode, changeMode, modeStyles} = props;
+export default function LightDarkButton({mode, changeMode, modeStyles}: LightDarkButtonProps) {
 
     const clickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
