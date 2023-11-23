@@ -22,7 +22,7 @@ export default function Home() {
     <main style={{backgroundColor: backgroundColor, color: color}}>
       <LightDarkButton mode={mode} changeMode={changeModeHandler} modeStyles={modeStyles}/>
       <HeroBanner mode={mode} modeStyles={modeStyles}/>
-      <Carousel />
+      <Carousel mode={mode} modeStyles={modeStyles}/>
       <ProjectList />
       <ContactForm />
       <Footer />
