@@ -11,11 +11,16 @@ import { modeStyles } from "../styles/styles-object";
 export default function Home() {
   const [mode, setMode] = useState("darkMode");
 
+  const changeModeHandler = () => {
+    const oppositeMode = mode === 'darkMode' ? 'lightMode' : 'darkMode';
+    setMode(oppositeMode);
+  }
+
   const backgroundColor = modeStyles[mode].background;
   const color = modeStyles[mode].color;
   return (
     <>
-      <LightDarkButton mode={mode} changeMode={() => {}} modeStyles={modeStyles}/>
+      <LightDarkButton mode={mode} changeMode={changeModeHandler} modeStyles={modeStyles}/>
       <HeroBanner />
       <Carousel />
       <ProjectList />

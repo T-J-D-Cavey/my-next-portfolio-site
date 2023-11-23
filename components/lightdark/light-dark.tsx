@@ -18,7 +18,6 @@ export default function LightDarkButton(props: LightDarkButtonProps) {
         e.preventDefault();
         changeMode();
     }
-    console.log("mode = ", mode)
     const src = mode === 'darkMode' ? moon : sun;
     let ctaButton = modeStyles[mode].ctaButton;
 
