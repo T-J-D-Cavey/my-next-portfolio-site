@@ -29,7 +29,17 @@ export default function CarouselComponent({ mode, modeStyles }: CarouselComponen
         </div>
         <Carousel activeIndex={index} onSelect={handleSelect}>
           <Carousel.Item className={classes.item}>
-            <Image width={400} height={600} layout="responsive" src={srcOne} alt="First slide" />
+            <Image width={400} height={600} src={srcOne} alt="First slide" />
+            <Carousel.Caption>
+              <h3 style={{ color: color }}>Dynamic and Interactive</h3>
+              <p style={{ color: color }}>
+                Made with React, powered by Vite and Rollup. Animations by
+                TSParticles. Images via Gimp
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item className={classes.item}>
+            <Image width={400} height={600} src={srcOne} alt="First slide" />
             <Carousel.Caption>
               <h3 style={{ color: color }}>Dynamic and Interactive</h3>
               <p style={{ color: color }}>
