@@ -22,14 +22,14 @@ export default function CarouselComponent({ mode, modeStyles }: CarouselComponen
   const srcOne = mode === "darkMode" ? reactDark : reactDark;
 
   return (
-    <section style={{ backgroundColor: backgroundColor, color: color }}>
+    <section style={{ backgroundColor: backgroundColor, color: color }} className={classes.section} id="projectID">
       <div className={classes.carousel_container}>
         <div style={{ color: color }}>
-          <h2 id="projectID">This Site:</h2>
+          <h2>THIS SITE IS:</h2>
         </div>
         <Carousel activeIndex={index} onSelect={handleSelect}>
           <Carousel.Item className={classes.item}>
-            <Image width={400} height={600} src={srcOne} alt="First slide" />
+            <Image width={600} height={600} src={srcOne} alt="First slide" />
             <Carousel.Caption>
               <h3 style={{ color: color }}>Dynamic and Interactive</h3>
               <p style={{ color: color }}>
@@ -38,8 +38,8 @@ export default function CarouselComponent({ mode, modeStyles }: CarouselComponen
               </p>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item className={classes.item}>
-            <Image width={400} height={600} src={srcOne} alt="First slide" />
+          {/* <Carousel.Item className={classes.item}>
+            <Image width={600} height={600} src={srcOne} alt="First slide" />
             <Carousel.Caption>
               <h3 style={{ color: color }}>Dynamic and Interactive</h3>
               <p style={{ color: color }}>
@@ -47,7 +47,7 @@ export default function CarouselComponent({ mode, modeStyles }: CarouselComponen
                 TSParticles. Images via Gimp
               </p>
             </Carousel.Caption>
-          </Carousel.Item>
+          </Carousel.Item> */}
           {/* <Carousel.Item>
           <img
             className="d-block w-100"
