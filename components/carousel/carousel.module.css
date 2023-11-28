@@ -33,19 +33,6 @@
     font-size: 1.6rem;
   } 
 
-  /* .carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: red!important;
-  } */
-
-  .carousel-indicators > button, .carousel-control-next-icon, .carousel-control-prev-icon {
-    background-color: var(--color-main-purple)!important;
-    color: red!important;
-}
-
-.carousel-inner {
-  border: 1px solid red;
-}
-
 @media screen and (max-width: 400px) {
   .carousel_container h2 {
     font-size: 2rem;

@@ -1,8 +1,8 @@
 import Carousel from "react-bootstrap/Carousel";
 import { useState } from "react";
 import Image from "next/image";
-import classes from "./carousel.module.css";
 import reactDark from "../../public/images/react_test.png";
+import classes from "./carousel.module.css";
 
 type CarouselComponentProps = {
   mode: string;
