@@ -1,13 +1,20 @@
 import Carousel from "react-bootstrap/Carousel";
 import { useState } from "react";
 import Image from "next/image";
-import reactDark from "../../public/images/react_test.png";
+import react_icon from '../../public/images/carousel/reactjs.png';
+import next_icon from '../../public/images/carousel/next.png';
+import mongodb_icon from '../../public/images/carousel/mongodb.png';
+import bootstrap_icon from '../../public/images/carousel/bootstrap.png';
+import typescript_icon from '../../public/images/carousel/typescript.png';
+import git_icon from '../../public/images/carousel/git.png';
 import classes from "./carousel.module.css";
 
 type CarouselComponentProps = {
   mode: string;
   modeStyles: Record<string, any>;
 };
+
+// NEED TO SWAP OUT GIT IMAGE WITH GITHUB IMAGE IN FINAL SLIDE:
 
 export default function CarouselComponent({
   mode,
@@ -21,7 +28,6 @@ export default function CarouselComponent({
 
   const backgroundColor = modeStyles[mode].background;
   const color = modeStyles[mode].color;
-  const srcOne = mode === "darkMode" ? reactDark : reactDark;
 
   return (
     <section
@@ -35,7 +41,7 @@ export default function CarouselComponent({
         </div>
         <Carousel activeIndex={index} onSelect={handleSelect}>
           <Carousel.Item className={classes.item}>
-            <Image width={600} height={600} src={srcOne} alt="First slide" />
+            <Image width={600} height={600} src={react_icon} alt="First slide" />
             <Carousel.Caption>
               <h3 style={{ color: color }}>Interactive and Dynamic</h3>
               <p style={{ color: color }}>
@@ -45,7 +51,7 @@ export default function CarouselComponent({
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className={classes.item}>
-            <Image width={600} height={600} src={srcOne} alt="First slide" />
+            <Image width={600} height={600} src={next_icon} alt="First slide" />
             <Carousel.Caption>
               <h3 style={{ color: color }}>SEO-Optimized Efficiency</h3>
               <p style={{ color: color }}>
@@ -55,7 +61,7 @@ export default function CarouselComponent({
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className={classes.item}>
-            <Image width={600} height={600} src={srcOne} alt="First slide" />
+            <Image width={600} height={600} src={mongodb_icon} alt="First slide" />
             <Carousel.Caption>
               <h3 style={{ color: color }}>Back-End Data Storage</h3>
               <p style={{ color: color }}>
@@ -65,7 +71,7 @@ export default function CarouselComponent({
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className={classes.item}>
-            <Image width={600} height={600} src={srcOne} alt="First slide" />
+            <Image width={600} height={600} src={bootstrap_icon} alt="First slide" />
             <Carousel.Caption>
               <h3 style={{ color: color }}>Sleek and Responsive</h3>
               <p style={{ color: color }}>
@@ -75,11 +81,22 @@ export default function CarouselComponent({
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className={classes.item}>
-            <Image width={600} height={600} src={srcOne} alt="First slide" />
+            <Image width={600} height={600} src={typescript_icon} alt="First slide" />
             <Carousel.Caption>
               <h3 style={{ color: color }}>Optimised Development</h3>
               <p style={{ color: color }}>
-                Made using modern web development tools: Typescript and GIT version control.  
+                Made using modern web development tools: Typescript, NPM and GIT
+                version control.
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item className={classes.item}>
+            <Image width={600} height={600} src={git_icon} alt="First slide" />
+            <Carousel.Caption>
+              <h3 style={{ color: color }}>Seamless Deployment</h3>
+              <p style={{ color: color }}>
+                Leveraging Vercel's continueous deployment with Github for an
+                automated deployment process and hassle-free updates.
               </p>
             </Carousel.Caption>
           </Carousel.Item>
