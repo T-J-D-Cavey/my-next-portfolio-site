@@ -2,19 +2,17 @@ import Carousel from "react-bootstrap/Carousel";
 import { useState } from "react";
 import Image from "next/image";
 import react_icon from '../../public/images/carousel/reactjs.png';
-import next_icon from '../../public/images/carousel/next.png';
+import next_icon from '../../public/images/carousel/nextpurpleslide.png';
 import mongodb_icon from '../../public/images/carousel/mongodb.png';
 import bootstrap_icon from '../../public/images/carousel/bootstrap.png';
 import typescript_icon from '../../public/images/carousel/typescript.png';
-import git_icon from '../../public/images/carousel/git.png';
+import github_icon from '../../public/images/carousel/githubslide.png';
 import classes from "./carousel.module.css";
 
 type CarouselComponentProps = {
   mode: string;
   modeStyles: Record<string, any>;
 };
-
-// NEED TO SWAP OUT GIT IMAGE WITH GITHUB IMAGE IN FINAL SLIDE:
 
 export default function CarouselComponent({
   mode,
@@ -89,7 +87,7 @@ export default function CarouselComponent({
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className={classes.item}>
-            <Image width={600} height={600} src={git_icon} alt="First slide" />
+            <Image width={600} height={600} src={github_icon} alt="First slide" />
             <Carousel.Caption>
               <h3 style={{ color: color }}>Seamless Deployment</h3>
               <p style={{ color: color }}>
