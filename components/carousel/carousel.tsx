@@ -26,12 +26,10 @@ export default function CarouselComponent({
     setIndex(selectedIndex);
   };
 
-  const backgroundColor = modeStyles[mode].background;
   const color = modeStyles[mode].color;
 
   return (
     <section
-      style={{ backgroundColor: backgroundColor, color: color }}
       className={classes.section}
       id="projectID"
     >
