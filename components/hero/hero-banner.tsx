@@ -10,7 +10,7 @@ type HeroBannerProps = {
 export default function HeroBanner({mode, modeStyles}: HeroBannerProps) {
 
     const ctaButton = modeStyles[mode].ctaButton;
-
+    const secondaryButton = modeStyles[mode].secondaryButton
     const nameStyle = mode === 'darkMode' ? '#202020': '#FAF9F6';
 
     return (
@@ -22,6 +22,9 @@ export default function HeroBanner({mode, modeStyles}: HeroBannerProps) {
                 </h1>
                 <Button variant={ctaButton} className={classes.button}>
                   <a href='/#projectID'>Show Me</a>
+                </Button>
+                <Button variant={secondaryButton} className={classes.button}>
+                  <a href='/#contactID'>Contact Me</a>
                 </Button>
                 <ParticlesComponent />
             </div>
