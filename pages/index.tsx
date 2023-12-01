@@ -23,7 +23,7 @@ export default function Home() {
       <LightDarkButton mode={mode} changeMode={changeModeHandler} modeStyles={modeStyles}/>
       <HeroBanner mode={mode} modeStyles={modeStyles}/>
       <Carousel mode={mode} modeStyles={modeStyles}/>
-      <ProjectList />
+      <ProjectList mode={mode} modeStyles={modeStyles}/>
       <ContactForm />
       <Footer />
     </main>
