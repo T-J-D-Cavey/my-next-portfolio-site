@@ -1,140 +1,143 @@
 .projectSection {
-    max-width: 50rem;
-    margin: 0 auto;
-    padding: 2rem 0;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
 .mainContainer {
-    border: 2px solid yellow;
+  margin: 0 auto;
 }
 
 .projectTextAndImageContainer {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .projectsTextContainer {
-    border: 1px solid red;
-    margin: 4rem auto 1rem auto;
-    width: fit-content;
+  margin: 4rem auto 1rem auto;
 }
 
 .projectsTextContainer h3 {
-    font-size: 3rem;
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
 .projectsTextContainer p {
-    max-width: 20rem;
+  max-width: 18rem;
+  margin-bottom: 1rem;
 }
 
 .projectPicMainContainer {
-    width: 50%;
-    margin: 0 auto;
-  }
-  
-  .projectPicMainContainer img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-  
-  .projectsTextContainer li {
-    line-height: 1.5rem;
-  }
+  width: 50%;
+  margin: 0 auto;
+}
 
-  .buttonMainContainer {
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-  }
+.projectPicMainContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
-  .buttonMainContainer button {
-    margin-bottom: 1rem;
-  }
-  
-  /* --------> Project modal styles: */
-  
-  .modalPicContainer {
-    width: 80%;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  .modalPicContainer img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-  
-  .modalTextContainer > * {
-    margin-bottom: 2rem;
-  }
+.projectsTextContainer li {
+  line-height: 1.5rem;
+}
 
-  
-  .modalTextContainer li {
-    margin-left: 2rem;
-    line-height: 1.25rem;
-  }
-  
-  .projectButton {
-    font-size: 1.2rem;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
-  }
-  
-  .seeDetails {
-    margin-left: 1.7rem;
-  }
+/* --------> Project modal styles: */
+
+.modalPicContainer {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.modalPicContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.modalTextContainer > * {
+  margin-bottom: 2rem;
+}
+
+.modalTextContainer li {
+  margin-left: 2rem;
+  line-height: 1.25rem;
+}
+
+.projectButton {
+  font-size: 1.2rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.seeDetails {
+  margin-left: 1.7rem;
+}
 
 /* --------> Tablet screen styles: */
 
-@media (max-width: 400px) {
-    .projectsTextContainer h3 {
-        font-size: 2rem;;
-    }
+@media (max-width: 700px) {
+  .mainContainer {
+    padding: 0 5vw;
+  }
 
-    .projectPicMainContainer {
-        width: 70%;
-    }
-
-    .modalPicContainer {
-        margin: 2rem auto 0 auto;
-        padding: 0;
-    }
-
-    .buttonMainContainer {
-        width: 100%;
-    }
+  .projectsTextContainer h3 {
+    font-size: 2.2rem;
+  }
+  .projectPicMainContainer {
+    width: 60%;
+  }
 }
 
-  @media (min-width: 700px) {
-    .projectSection {
-      padding: 7rem 2rem 2rem 2rem;
-    }
-  
-    .projectTextAndImageContainer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .projectsTextContainer {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items:start;
-      height: 30rem;
-      margin: 1rem auto;
-    }
-    .buttonMainContainer {
-        width: 100%;
-    }
+@media (max-width: 400px) {
 
+  .mainContainer {
+    padding: 0 1rem;
   }
-  
-  /* --------> Desktop screen styles: */
-  
-  @media (min-width: 1000px) {  
-    .seeDetails {
-      margin-left: 9.7rem;
-    }
+
+  .projectsTextContainer ul {
+    margin-bottom: 2rem;
   }
+
+
+  .modalPicContainer {
+    margin: 2rem auto 0 auto;
+    padding: 0;
+  }
+
+  .buttonMainContainer button {
+    margin-bottom: 0.5rem;
+  }
+  .projectPicMainContainer {
+    width: 80%;
+  }
+}
+
+@media (min-width: 400px) {
+  .projectTextAndImageContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .projectSection {
+    padding: 7rem 2rem 2rem 2rem;
+  }
+
+  .projectsTextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 1rem auto;
+  }
+}
+
+/* --------> Desktop screen styles: */
+
+@media (min-width: 1000px) {
+  .seeDetails {
+    margin-left: 9.7rem;
+  }
+}
