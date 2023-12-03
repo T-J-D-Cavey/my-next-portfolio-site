@@ -70,6 +70,9 @@ type ProjectItemComponentProps = {
             Features include a countdown timer, a score and a lives-left metric. 
             Click on the wrong thing or take too long and the bugs will take over!
               </p>
+          <div className={classes.modalPicContainer}>
+            <Image width={600} height={600} className={classes.projectPicMain} src={mobileTwo} alt='click a bug screenshot' />
+          </div>
             <h4>TECHNOLOGIES USED:</h4>
             <ul>
                 <li>React / React Router DOM</li>
@@ -80,9 +83,6 @@ type ProjectItemComponentProps = {
                 <li>Git and Github</li>
                 <li>Netlify</li>
             </ul>
-          </div>
-          <div className={classes.modalPicContainer}>
-            <Image width={600} height={600} className={classes.projectPicMain} src={mobileTwo} alt='click a bug screenshot' />
           </div>
         </Modal.Body>
         <Modal.Footer style={{backgroundColor: backgroundColor, color: color}}>

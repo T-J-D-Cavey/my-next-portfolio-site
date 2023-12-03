@@ -44,9 +44,8 @@
 /* --------> Project modal styles: */
 
 .modalPicContainer {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 .modalPicContainer img {
@@ -55,8 +54,8 @@
   object-fit: contain;
 }
 
-.modalTextContainer > * {
-  margin-bottom: 2rem;
+.modalTextContainer > h4 {
+  margin-top: 2rem;
 }
 
 .modalTextContainer li {
