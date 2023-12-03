@@ -1,98 +1,147 @@
-import {useState} from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import Image from 'next/image';
-import mobileOne from '../../public/images/projectimages/treadit_1.png';
-import mobileTwo from '../../public/images/projectimages/treadit_2.png';
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import Image from "next/image";
+import mobileOne from "../../public/images/projectimages/treadit_1.png";
+import mobileTwo from "../../public/images/projectimages/treadit_2.png";
 import classes from "./projects.module.css";
 
-
 type ProjectItemComponentProps = {
-    mode: string;
-    modeStyles: Record<string, any>;
-  };
+  mode: string;
+  modeStyles: Record<string, any>;
+};
 
-  export default function MyWebDevBlog({mode, modeStyles}: ProjectItemComponentProps) {
+export default function MyWebDevBlog({
+  mode,
+  modeStyles,
+}: ProjectItemComponentProps) {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+  const ctaButton = modeStyles[mode].ctaButton;
+  const secondaryButton = modeStyles[mode].secondaryButton;
+  const backgroundColor = modeStyles[mode].projectBackgroundOne;
+  const color = modeStyles[mode].color;
 
-    const ctaButton = modeStyles[mode].ctaButton;
-    const secondaryButton = modeStyles[mode].secondaryButton;
-    const backgroundColor = modeStyles[mode].projectBackgroundOne;
-    const color = modeStyles[mode].color;
-
-    return (
-      <div style={{backgroundColor: backgroundColor, color: color}}>
+  return (
+    <div style={{ backgroundColor: backgroundColor, color: color }}>
       <section className={classes.projectSection}>
         <div className={classes.mainContainer}>
-        <div className={classes.projectTextAndImageContainer}>
-          <div className={classes.projectsTextContainer}>
-            <h3>Click-A-Bug</h3>
-            <div>
-              <p>An online game to test your reactions: can you save the professor from the bugs in his servers?</p>
-              <ul>
-                <li>React web app game</li>
-                <li>Complex state managed by Redux</li>
-                <li>Retro 80's style and design</li>
-              </ul>
+          <div className={classes.projectTextAndImageContainer}>
+            <div className={classes.projectsTextContainer}>
+              <h3>Treadit</h3>
+              <div>
+                <p>
+                  A Reddit-replica for hikers. Browse a list of the best outdoor
+                  & adventure sub-reddits, or create your own filters and scroll
+                  the results.
+                </p>
+                <ul>
+                  <li>React and Redux</li>
+                  <li>Reddit API</li>
+                  <li>Jest and Cypress testing</li>
+                </ul>
+              </div>
+            </div>
+            <div className={classes.projectPicMainContainer}>
+              <Image
+                width={600}
+                height={1000}
+                className={classes.projectPicMain}
+                src={mobileOne}
+                alt="homeage banner and nav bar"
+              />
             </div>
           </div>
-          <div className={classes.projectPicMainContainer}>
-            <Image width={600} height={1000} className={classes.projectPicMain} src={mobileOne} alt='click a bug screenshot' />
+          <div className={classes.buttonMainContainer}>
+            <Button
+              variant={secondaryButton}
+              onClick={handleShow}
+              className={classes.projectButton}
+            >
+              See details
+            </Button>
+            <Button
+              variant={ctaButton}
+              onClick={handleClose}
+              className={classes.projectButton}
+            >
+              <a href="https://treadit.netlify.app/" target="_blank">
+                Visit site
+              </a>
+            </Button>
           </div>
-        </div>
-        <div className={classes.buttonMainContainer}>
-
-        <Button variant={secondaryButton} onClick={handleShow} className={classes.projectButton}>
-          See details
-        </Button>
-        <Button variant={ctaButton} onClick={handleClose} className={classes.projectButton}>
-              <a href='https://click-a-bug.netlify.app/' target='_blank'>Visit site</a>
-        </Button>
-        </div>
         </div>
       </section>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton style={{backgroundColor: backgroundColor, color: color}}>
+        <Modal.Header
+          closeButton
+          style={{ backgroundColor: backgroundColor, color: color }}
+        >
           <Modal.Title>
-            <h2>Click-a-bug</h2>
+            <h2>Treadit</h2>
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body style={{backgroundColor: '#FAF9F6', color: '#202020'}}>
+        <Modal.Body style={{ backgroundColor: "#FAF9F6", color: "#202020" }}>
           <div className={classes.modalTextContainer}>
             <p>
-            Click-a-bug is a single-page-application (SPA) showcasing React and Redux managing an app with a complex state. 
-            The app imitates a 'whack-a-mole' game, where users see a grid (of servers) and have to 'click' (or tap) on any bugs that appear
-            whilst avoiding clicking on anything else that pops up. 
-            Features include a countdown timer, a score and a lives-left metric. 
-            Click on the wrong thing or take too long and the bugs will take over!
-              </p>
-          <div className={classes.modalPicContainer}>
-            <Image width={600} height={1000} className={classes.projectPicMain} src={mobileTwo} alt='click a bug screenshot' />
-          </div>
+              This SPA hosted on Netlify uses the Reddit JSON API to
+              asynchronously fetch Reddit posts based on the user's filter and
+              search parameters. It has a default filter applied, and contains
+              personally selected sub-reddits that appeal to hikers, walkers and
+              lovers of adventure and the great outdoors. The user interface is
+              a feed of the post results and includes its content, media and
+              engagement metrics. The pictures in these posts are very often
+              beautifully scenic and dynamic by design. Unit, component and
+              end-to-end (E2E) tests using Jest and Cypress frameworks.
+            </p>
+            <div className={classes.modalPicContainer}>
+              <Image
+                width={600}
+                height={1000}
+                className={classes.projectPicMain}
+                src={mobileTwo}
+                alt="hiking posts with comment and like volumes showing"
+              />
+            </div>
             <h4>TECHNOLOGIES USED:</h4>
             <ul>
-                <li>React / React Router DOM</li>
-                <li>Redux / React Redux / Redux Toolkit</li>
-                <li>CSS</li>
-                <li>NPM</li>
-                <li>VSCode</li>
-                <li>Git and Github</li>
-                <li>Netlify</li>
+              <li>React / React Router DOM</li>
+              <li>Redux / React-Redux / Redux Toolkit</li>
+              <li>Reddit JSON API</li>
+              <li>Cypress testing library</li>
+              <li>Jest testing library</li>
+              <li>Mock Server Worker</li>
+              <li>CSS</li>
+              <li>NPM</li>
+              <li>Git / Github</li>
+              <li>VSCode</li>
+              <li>Netlify</li>
             </ul>
           </div>
         </Modal.Body>
-        <Modal.Footer style={{backgroundColor: backgroundColor, color: color}}>
-          <Button variant={secondaryButton} onClick={handleClose} className={classes.projectButton}>
+        <Modal.Footer
+          style={{ backgroundColor: backgroundColor, color: color }}
+        >
+          <Button
+            variant={secondaryButton}
+            onClick={handleClose}
+            className={classes.projectButton}
+          >
             Close
           </Button>
-          <Button variant={ctaButton} onClick={handleClose} className={classes.projectButton}>
-            <a href='https://click-a-bug.netlify.app/' target='_blank'>Visit site</a>
+          <Button
+            variant={ctaButton}
+            onClick={handleClose}
+            className={classes.projectButton}
+          >
+            <a href="https://treadit.netlify.app/" target="_blank">
+              Visit site
+            </a>
           </Button>
         </Modal.Footer>
       </Modal>
     </div>
-    )
+  );
 }

@@ -29,18 +29,21 @@ type ProjectItemComponentProps = {
         <div className={classes.mainContainer}>
         <div className={classes.projectTextAndImageContainer}>
           <div className={classes.projectsTextContainer}>
-            <h3>Click-A-Bug</h3>
+          <h3>xChange</h3>
             <div>
-              <p>An online game to test your reactions: can you save the professor from the bugs in his servers?</p>
+              <p>
+                A web app that allows quick and easy conversion of the world's
+                top currencies.
+              </p>
               <ul>
-                <li>React web app game</li>
-                <li>Complex state managed by Redux</li>
-                <li>Retro 80's style and design</li>
+                <li>TypeScript</li>
+                <li>FreeCurrency API</li>
+                <li>TS-Particles</li>
               </ul>
             </div>
           </div>
           <div className={classes.projectPicMainContainer}>
-            <Image width={600} height={1000} className={classes.projectPicMain} src={mobileOne} alt='click a bug screenshot' />
+            <Image width={600} height={1000} className={classes.projectPicMain} src={mobileOne} alt='Inputs for currency and amounts' />
           </div>
         </div>
         <div className={classes.buttonMainContainer}>
@@ -49,7 +52,7 @@ type ProjectItemComponentProps = {
           See details
         </Button>
         <Button variant={ctaButton} onClick={handleClose} className={classes.projectButton}>
-              <a href='https://click-a-bug.netlify.app/' target='_blank'>Visit site</a>
+              <a href='https://xchange-cavey-app.netlify.app/' target='_blank'>Visit site</a>
         </Button>
         </div>
         </div>
@@ -57,30 +60,38 @@ type ProjectItemComponentProps = {
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton style={{backgroundColor: backgroundColor, color: color}}>
           <Modal.Title>
-            <h2>Click-a-bug</h2>
+            <h2>xChange</h2>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body style={{backgroundColor: '#FAF9F6', color: '#202020'}}>
           <div className={classes.modalTextContainer}>
-            <p>
-            Click-a-bug is a single-page-application (SPA) showcasing React and Redux managing an app with a complex state. 
-            The app imitates a 'whack-a-mole' game, where users see a grid (of servers) and have to 'click' (or tap) on any bugs that appear
-            whilst avoiding clicking on anything else that pops up. 
-            Features include a countdown timer, a score and a lives-left metric. 
-            Click on the wrong thing or take too long and the bugs will take over!
-              </p>
+          <p>
+              xChange connects to the{" "}
+              <a href="https://freecurrencyapi.com/docs" target="_blank">
+                Free currency API{" "}
+              </a>
+              for daily exchange rates of the world's top currencies. Choose any
+              of the available base and target currencies and get that day's
+              conversion rate. Use one of the inputs and the app will
+              automatically create the equivilent amount of the other currency
+              based on the conversion rate. Interact with the tsparticles
+              animation. Open up a Bootstrap modal containing links to the API
+              documentation and disclaimers. Fast and Responsive for any screen
+              size.
+            </p>
           <div className={classes.modalPicContainer}>
-            <Image width={600} height={1000} className={classes.projectPicMain} src={mobileTwo} alt='click a bug screenshot' />
+            <Image width={600} height={1000} className={classes.projectPicMain} src={mobileTwo} alt='Information about site' />
           </div>
-            <h4>TECHNOLOGIES USED:</h4>
+          <h4>TECHNOLOGIES USED:</h4>
             <ul>
-                <li>React / React Router DOM</li>
-                <li>Redux / React Redux / Redux Toolkit</li>
-                <li>CSS</li>
-                <li>NPM</li>
-                <li>VSCode</li>
-                <li>Git and Github</li>
-                <li>Netlify</li>
+              <li>React / TypeScript</li>
+              <li>Redux / React-Redux / Redux Toolkit</li>
+              <li>Vite / Rollup</li>
+              <li>React Bootstrap</li>
+              <li>TS-Particles</li>
+              <li>Git / Github</li>
+              <li>VSCode</li>
+              <li>Netlify</li>
             </ul>
           </div>
         </Modal.Body>
@@ -89,7 +100,7 @@ type ProjectItemComponentProps = {
             Close
           </Button>
           <Button variant={ctaButton} onClick={handleClose} className={classes.projectButton}>
-            <a href='https://click-a-bug.netlify.app/' target='_blank'>Visit site</a>
+            <a href='https://xchange-cavey-app.netlify.app/' target='_blank'>Visit site</a>
           </Button>
         </Modal.Footer>
       </Modal>

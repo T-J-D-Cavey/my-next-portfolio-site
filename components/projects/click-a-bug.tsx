@@ -40,7 +40,7 @@ type ProjectItemComponentProps = {
             </div>
           </div>
           <div className={classes.projectPicMainContainer}>
-            <Image width={600} height={1000} className={classes.projectPicMain} src={mobileOne} alt='click a bug screenshot' />
+            <Image width={600} height={1000} className={classes.projectPicMain} src={mobileOne} alt='Information about the game and a animated professor with bugs' />
           </div>
         </div>
         <div className={classes.buttonMainContainer}>
@@ -70,7 +70,7 @@ type ProjectItemComponentProps = {
             Click on the wrong thing or take too long and the bugs will take over!
               </p>
           <div className={classes.modalPicContainer}>
-            <Image width={600} height={1000} className={classes.projectPicMain} src={mobileTwo} alt='click a bug screenshot' />
+            <Image width={600} height={1000} className={classes.projectPicMain} src={mobileTwo} alt='live shot of the whack a mole style game' />
           </div>
             <h4>TECHNOLOGIES USED:</h4>
             <ul>
