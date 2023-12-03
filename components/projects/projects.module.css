@@ -91,7 +91,7 @@
 @media (max-width: 400px) {
 
   .mainContainer {
-    padding: 0 1rem;
+    padding: 0 17%;
   }
 
   .projectsTextContainer ul {
@@ -130,6 +130,14 @@
     flex-direction: column;
     align-items: start;
     margin: 1rem auto;
+  }
+
+  .buttonMainContainer {
+    margin-top: -10rem;
+  }
+
+  .mainContainer {
+    padding-bottom: 10rem;
   }
 }
 
