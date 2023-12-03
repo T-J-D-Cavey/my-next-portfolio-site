@@ -8,8 +8,6 @@ export const modeStyles: Record<string, any> = {
       projectBackgroundTwo: '#5d3754',
       projectBackgroundThree: '#193652',
       projectBackgroundFour: '#1D2E2B',
-      projectBackgroundFive: '#003b49',
-      projectBackgroundSix: '#5d3754',
     },
     lightMode: {
       ctaButton: 'dark',
@@ -20,7 +18,5 @@ export const modeStyles: Record<string, any> = {
       projectBackgroundTwo: '#E1F8DC',
       projectBackgroundThree: '#FFE7C7',
       projectBackgroundFour: '#CAF1DE',
-      projectBackgroundFive: '#C3E6EB',
-      projectBackgroundSix: '#E1F8DC',
     },
   };

@@ -20,7 +20,7 @@ type ProjectItemComponentProps = {
 
     const ctaButton = modeStyles[mode].ctaButton;
     const secondaryButton = modeStyles[mode].secondaryButton;
-    const backgroundColor = modeStyles[mode].projectBackgroundThree;
+    const backgroundColor = modeStyles[mode].projectBackgroundTwo;
     const color = modeStyles[mode].color;
 
     return (
