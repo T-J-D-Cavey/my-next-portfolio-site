@@ -2,8 +2,8 @@ import {useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Image from 'next/image';
-import mobileOne from '../../public/images/projectimages/blog_mobile_prod.png';
-import mobileTwo from '../../public/images/projectimages/blog_mobile_prod_2.png';
+import mobileOne from '../../public/images/projectimages/blog_1.png';
+import mobileTwo from '../../public/images/projectimages/blog_2.png';
 import classes from "./projects.module.css";
 
 
@@ -40,7 +40,7 @@ type ProjectItemComponentProps = {
             </div>
           </div>
           <div className={classes.projectPicMainContainer}>
-            <Image width={600} height={600} className={classes.projectPicMain} src={mobileOne} alt='click a bug screenshot' />
+            <Image width={600} height={1000} className={classes.projectPicMain} src={mobileOne} alt='click a bug screenshot' />
           </div>
         </div>
         <div className={classes.buttonMainContainer}>
@@ -54,7 +54,6 @@ type ProjectItemComponentProps = {
         </div>
         </div>
       </section>
-      {/* Modal: */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton style={{backgroundColor: backgroundColor, color: color}}>
           <Modal.Title>
@@ -71,7 +70,7 @@ type ProjectItemComponentProps = {
             Click on the wrong thing or take too long and the bugs will take over!
               </p>
           <div className={classes.modalPicContainer}>
-            <Image width={600} height={600} className={classes.projectPicMain} src={mobileTwo} alt='click a bug screenshot' />
+            <Image width={600} height={1000} className={classes.projectPicMain} src={mobileTwo} alt='click a bug screenshot' />
           </div>
             <h4>TECHNOLOGIES USED:</h4>
             <ul>
