@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { useRef } from "react";
+import { useRef} from "react";
 import classes from "./contact-form.module.css";
 
 type ContactFormProps = {
@@ -10,9 +10,7 @@ type ContactFormProps = {
 
 export default function ContactForm({ mode, modeStyles }: ContactFormProps) {
   const ctaButton = modeStyles[mode].ctaButton;
-  const secondaryButton = modeStyles[mode].secondaryButton;
-  const backgroundColor = modeStyles[mode].background;
-  const color = modeStyles[mode].color;
+
   const nameInputRef = useRef<HTMLInputElement | null>(null);
   const emailInputRef = useRef<HTMLInputElement | null>(null);
   const messageInputRef = useRef<HTMLTextAreaElement | null>(null);;
@@ -22,8 +20,7 @@ export default function ContactForm({ mode, modeStyles }: ContactFormProps) {
     console.log(nameInputRef.current!.value)
   }
   return (
-    <section className={classes.formSection} id="contactID">
-        <h2>Contact me</h2>
+    <>
       <Form onSubmit={formSubmitHandler}>
         <Form.Group className="mb-3" controlId="name">
           <Form.Label>Name:</Form.Label>
@@ -50,6 +47,6 @@ export default function ContactForm({ mode, modeStyles }: ContactFormProps) {
           Submit
         </Button>
       </Form>
-    </section>
+    </>
   );
 }

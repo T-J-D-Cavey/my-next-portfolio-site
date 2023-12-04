@@ -4,7 +4,7 @@ import LightDarkButton from "../components/lightdark/light-dark";
 import HeroBanner from "../components/hero/hero-banner";
 import Carousel from "../components/carousel/carousel";
 import ProjectList from "../components/projects/projects-list";
-import ContactForm from "../components/contact/contact-form";
+import ContactMe from "../components/contact/contact-me";
 import Footer from "../components/footer/footer";
 
 import { modeStyles } from "../styles/styles-object";
@@ -26,7 +26,7 @@ export default function Home() {
       <HeroBanner mode={mode} modeStyles={modeStyles}/>
       <Carousel mode={mode} modeStyles={modeStyles}/>
       <ProjectList mode={mode} modeStyles={modeStyles}/>
-      <ContactForm mode={mode} modeStyles={modeStyles}/>
+      <ContactMe mode={mode} modeStyles={modeStyles}/>
       <Footer />
     </main>
   );
