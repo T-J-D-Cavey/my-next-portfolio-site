@@ -41,7 +41,6 @@ export default function ContactMe({ mode, modeStyles }: ContactMeProps) {
   }, [status]);
 
   async function sendFormData(formData: formData) {
-    console.log(formData);
     setStatus("pending");
     const result = await postData("/api/contact-tim", formData);
 

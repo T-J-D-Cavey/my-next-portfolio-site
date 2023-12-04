@@ -26,8 +26,6 @@ export default function ContactForm({ mode, modeStyles, sendFormDataCaller }: Co
   
   function formSubmitHandler(e:React.FormEvent) {
     e.preventDefault();
-    // Need to add client side validation here. 
-
     const formData = {
       name: nameInputRef.current!.value,
       email: emailInputRef.current!.value,
@@ -41,12 +39,12 @@ export default function ContactForm({ mode, modeStyles, sendFormDataCaller }: Co
       <Form onSubmit={formSubmitHandler}>
         <Form.Group className="mb-3" controlId="name">
           <Form.Label>Name:</Form.Label>
-          <Form.Control type="text" placeholder="Enter name" ref={nameInputRef}/>
+          <Form.Control type="text" placeholder="Enter name" ref={nameInputRef} required/>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="email">
           <Form.Label>Email address:</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" ref={emailInputRef}/>
+          <Form.Control type="email" placeholder="Enter email" ref={emailInputRef} required/>
           <p className={classes.formText}>
             We'll never share your email with anyone else.
           </p>
@@ -54,7 +52,7 @@ export default function ContactForm({ mode, modeStyles, sendFormDataCaller }: Co
 
         <Form.Group className="mb-3" controlId="message">
           <Form.Label>Message:</Form.Label>
-          <Form.Control as="textarea" rows={3} placeholder="Enter message" ref={messageInputRef}/>
+          <Form.Control as="textarea" rows={3} placeholder="Enter message" ref={messageInputRef} required/>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
