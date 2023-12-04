@@ -26,7 +26,7 @@ export default function Home() {
       <HeroBanner mode={mode} modeStyles={modeStyles}/>
       <Carousel mode={mode} modeStyles={modeStyles}/>
       <ProjectList mode={mode} modeStyles={modeStyles}/>
-      <ContactForm />
+      <ContactForm mode={mode} modeStyles={modeStyles}/>
       <Footer />
     </main>
   );

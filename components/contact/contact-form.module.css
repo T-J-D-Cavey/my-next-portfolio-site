@@ -1,0 +1,10 @@
+.formSection {
+    width: 90%;
+    margin: 4rem auto 2rem auto;
+    max-width: 45rem;
+}
+
+.formText {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
