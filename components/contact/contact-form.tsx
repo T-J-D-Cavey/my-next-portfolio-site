@@ -32,7 +32,7 @@ export default function ContactForm({ mode, modeStyles, sendFormDataCaller }: Co
       name: nameInputRef.current!.value,
       email: emailInputRef.current!.value,
       message: messageInputRef.current!.value,
-      newsletter: newsletterInputRef.current!.value ? true : false
+      newsletter: newsletterInputRef.current!.checked,
     }
     sendFormDataCaller(formData);
   }

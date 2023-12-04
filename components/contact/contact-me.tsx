@@ -30,18 +30,18 @@ export default function ContactMe({ mode, modeStyles }: ContactMeProps) {
   };
 
   useEffect(() => {
-    console.log(`status = ${status}`);
     let timeoutId: NodeJS.Timeout;
     if(status === "error" || status === "success") {
       timeoutId = setTimeout(() => {
         setStatus(null);
         setStatusMessage(null);
-      }, 3000);
+      }, 2000);
     }
     return () => clearTimeout(timeoutId);
   }, [status]);
 
   async function sendFormData(formData: formData) {
+    console.log(formData);
     setStatus("pending");
     const result = await postData("/api/contact-tim", formData);
 
@@ -58,21 +58,21 @@ export default function ContactMe({ mode, modeStyles }: ContactMeProps) {
 
   if(status === 'pending') {
     notificationData = {
-      status: 'pending',
-      message: 'Sending your message'
+      status: 'Sending',
+      message: 'Waiting for confirmation'
     }
   }
 
   if(status === 'success') {
     notificationData = {
-      status: 'success',
-      message: 'Send your message'
+      status: 'Success!',
+      message: 'I got your message. Thank you.'
     }
   }
 
   if(status === 'error') {
     notificationData = {
-      status: 'error',
+      status: 'Error',
       message: `Oh no. ${statusMessage}`
     }
   }
@@ -80,7 +80,7 @@ export default function ContactMe({ mode, modeStyles }: ContactMeProps) {
   return (
     <section className={classes.formSection} id="contactID">
       <h2>Contact me</h2>
-      {status && <Notification notificationData={notificationData} mode={mode} modeStyles={modeStyles}/>}
+      {status && <Notification notificationData={notificationData}/>}
       <ContactForm mode={mode} modeStyles={modeStyles} sendFormDataCaller={sendFormData}/>
     </section>
   );
