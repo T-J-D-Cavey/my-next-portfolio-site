@@ -1,5 +1,6 @@
 .formSection {
     width: 90%;
+    position: relative;
     margin: 4rem auto 2rem auto;
     max-width: 45rem;
 }

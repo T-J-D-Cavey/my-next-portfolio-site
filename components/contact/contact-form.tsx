@@ -6,18 +6,35 @@ import classes from "./contact-form.module.css";
 type ContactFormProps = {
   mode: string;
   modeStyles: Record<string, any>;
+  sendFormDataCaller: (formData: formData) => void;
 };
 
-export default function ContactForm({ mode, modeStyles }: ContactFormProps) {
+type formData = {
+  name: string;
+  email: string;
+  message: string;
+  newsletter: boolean;
+};
+
+export default function ContactForm({ mode, modeStyles, sendFormDataCaller }: ContactFormProps) {
   const ctaButton = modeStyles[mode].ctaButton;
 
   const nameInputRef = useRef<HTMLInputElement | null>(null);
   const emailInputRef = useRef<HTMLInputElement | null>(null);
   const messageInputRef = useRef<HTMLTextAreaElement | null>(null);;
   const newsletterInputRef = useRef<HTMLInputElement | null>(null);
+  
   function formSubmitHandler(e:React.FormEvent) {
     e.preventDefault();
-    console.log(nameInputRef.current!.value)
+    // Need to add client side validation here. 
+
+    const formData = {
+      name: nameInputRef.current!.value,
+      email: emailInputRef.current!.value,
+      message: messageInputRef.current!.value,
+      newsletter: newsletterInputRef.current!.value ? true : false
+    }
+    sendFormDataCaller(formData);
   }
   return (
     <>
