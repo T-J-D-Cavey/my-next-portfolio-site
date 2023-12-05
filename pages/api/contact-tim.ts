@@ -1,5 +1,6 @@
 import validator from "validator";
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { connectToDB } from "../../utils/mongo_connect";
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 type ResponseObject = {
   message: string;
