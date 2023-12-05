@@ -80,7 +80,7 @@ export default function ContactMe({ mode, modeStyles }: ContactMeProps) {
     <section className={classes.formSection} id="contactID">
       <h2>Contact me</h2>
       {status && <Notification notificationData={notificationData}/>}
-      <ContactForm mode={mode} modeStyles={modeStyles} sendFormDataCaller={sendFormData}/>
+      <ContactForm mode={mode} modeStyles={modeStyles} sendFormDataCaller={sendFormData} submitStatus={status}/>
     </section>
   );
 }

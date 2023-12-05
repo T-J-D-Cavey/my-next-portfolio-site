@@ -40,5 +40,6 @@ export default function handler(
 console.log(sanitizedData);
 
 
-  res.status(200).json({message: "this works!"})
+  res.status(200).json({message: "this works!"});
+  return;
 }

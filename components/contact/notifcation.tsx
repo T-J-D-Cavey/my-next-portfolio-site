@@ -16,7 +16,7 @@ export default function Notification({ notificationData }: NotificationProps) {
   return (
     <div className={classes.notificationContainer}>
       <div>
-        <p>{notificationData.status} </p>
+        <h3>{notificationData.status} </h3>
         {notificationData.status === "Sending" && <Spinner animation="grow" variant="light" />}
         {notificationData.message && <p>{notificationData.message}</p>}
       </div>

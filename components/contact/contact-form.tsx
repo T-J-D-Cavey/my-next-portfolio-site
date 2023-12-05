@@ -1,12 +1,13 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { useRef} from "react";
+import { useRef, useEffect} from "react";
 import classes from "./contact-form.module.css";
 
 type ContactFormProps = {
   mode: string;
   modeStyles: Record<string, any>;
   sendFormDataCaller: (formData: formData) => void;
+  submitStatus: string | null;
 };
 
 type formData = {
@@ -16,13 +17,23 @@ type formData = {
   newsletter: boolean;
 };
 
-export default function ContactForm({ mode, modeStyles, sendFormDataCaller }: ContactFormProps) {
+export default function ContactForm({ mode, modeStyles, sendFormDataCaller, submitStatus }: ContactFormProps) {
   const ctaButton = modeStyles[mode].ctaButton;
 
   const nameInputRef = useRef<HTMLInputElement | null>(null);
   const emailInputRef = useRef<HTMLInputElement | null>(null);
   const messageInputRef = useRef<HTMLTextAreaElement | null>(null);;
   const newsletterInputRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    if(submitStatus === "success") {
+      nameInputRef.current!.value = "";
+      emailInputRef.current!.value = "";
+      messageInputRef.current!.value = "";
+      newsletterInputRef.current!.checked = false;
+    }
+    return;
+  }, [submitStatus])
   
   function formSubmitHandler(e:React.FormEvent) {
     e.preventDefault();
