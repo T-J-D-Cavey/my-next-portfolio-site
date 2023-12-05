@@ -8,7 +8,7 @@ type NotificationProps = {
   };
 };
 
-// need to add a spinner here if the status is pending
+// need to add tick icon for success and cross icon for error
 
 export default function Notification({ notificationData }: NotificationProps) {
   console.log("this renders");
