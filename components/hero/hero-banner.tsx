@@ -14,7 +14,7 @@ export default function HeroBanner({mode, modeStyles}: HeroBannerProps) {
     const nameStyle = mode === 'darkMode' ? '#202020': '#FAF9F6';
 
     return (
-        <section className={classes.hero_section} id='heroBanner'>
+        <header className={classes.hero_section} id='heroBanner'>
             <div className={classes.hero_container}>
                 <h1>Hi, I'm <span style={{color: nameStyle}}>Tim Cavey</span>.
                     <br />
@@ -28,6 +28,6 @@ export default function HeroBanner({mode, modeStyles}: HeroBannerProps) {
                 </Button>
                 <ParticlesComponent />
             </div>
-        </section>
+        </header>
     )
 }

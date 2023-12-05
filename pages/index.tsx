@@ -21,13 +21,13 @@ export default function Home() {
   const backgroundColor = modeStyles[mode].background;
   const color = modeStyles[mode].color;
   return (
-    <main style={{backgroundColor: backgroundColor, color: color}}>
+    <div style={{backgroundColor: backgroundColor, color: color}}>
       <LightDarkButton mode={mode} changeMode={changeModeHandler} modeStyles={modeStyles}/>
       <HeroBanner mode={mode} modeStyles={modeStyles}/>
       <Carousel mode={mode} modeStyles={modeStyles}/>
       <ProjectList mode={mode} modeStyles={modeStyles}/>
       <ContactMe mode={mode} modeStyles={modeStyles}/>
       <Footer />
-    </main>
+    </div>
   );
 }

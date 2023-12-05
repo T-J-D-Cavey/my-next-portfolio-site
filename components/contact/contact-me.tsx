@@ -35,7 +35,7 @@ export default function ContactMe({ mode, modeStyles }: ContactMeProps) {
       timeoutId = setTimeout(() => {
         setStatus(null);
         setStatusMessage(null);
-      }, 2000);
+      }, 3000);
     }
     return () => clearTimeout(timeoutId);
   }, [status]);
