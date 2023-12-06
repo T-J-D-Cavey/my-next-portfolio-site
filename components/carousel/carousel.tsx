@@ -29,7 +29,7 @@ export default function CarouselComponent({
   return (
     <section
       className={classes.section}
-      id="projectID"
+      id="projects"
     >
       <div className={classes.carousel_container}>
         <div style={{ color: color }}>

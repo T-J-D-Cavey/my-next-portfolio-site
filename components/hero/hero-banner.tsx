@@ -14,17 +14,17 @@ export default function HeroBanner({mode, modeStyles}: HeroBannerProps) {
     const nameStyle = mode === 'darkMode' ? '#202020': '#FAF9F6';
 
     return (
-        <header className={classes.hero_section} id='bubbles'>
+        <header className={classes.hero_section} id='hi'>
             <div className={classes.hero_container}>
                 <h1>Hi, I'm <span style={{color: nameStyle}}>Tim Cavey</span>.
                     <br />
                     Web Developer.
                 </h1>
                 <Button variant={ctaButton} className={classes.button}>
-                  <a href='/#projectID'>Show Me</a>
+                  <a href='/#projects'>Show Me</a>
                 </Button>
                 <Button variant={secondaryButton} className={classes.button}>
-                  <a href='/#contactID'>Contact Me</a>
+                  <a href='/#contact'>Contact Me</a>
                 </Button>
                 <ParticlesComponent />
             </div>

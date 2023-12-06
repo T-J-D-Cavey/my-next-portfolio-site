@@ -39,7 +39,7 @@ export default function Footer({mode, modeStyles}: FooterProps) {
         </li>
       </ul>
       <div className={classes.iconContainer}>
-      <a href="#bubbles">
+      <a href="#hi">
             <Image width={50} height={50} src={upArrow} alt=""/>
             </a>
       </div>

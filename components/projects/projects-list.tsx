@@ -25,3 +25,5 @@ export default function ProjectList({mode, modeStyles}: ProjectListComponentProp
         </main>
     )
 }
+
+// I need to change the wording of buttons on each carousel from 'visit site' to 'Show me'

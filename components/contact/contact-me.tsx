@@ -77,7 +77,7 @@ export default function ContactMe({ mode, modeStyles }: ContactMeProps) {
   }
 
   return (
-    <section className={classes.formSection} id="contactID">
+    <section className={classes.formSection} id="contact">
       <div className={classes.formContainer}>
         <h2>Contact me</h2>
         {status && <Notification notificationData={notificationData} />}
