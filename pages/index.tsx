@@ -27,7 +27,7 @@ export default function Home() {
       <Carousel mode={mode} modeStyles={modeStyles}/>
       <ProjectList mode={mode} modeStyles={modeStyles}/>
       <ContactMe mode={mode} modeStyles={modeStyles}/>
-      <Footer />
+      <Footer mode={mode} modeStyles={modeStyles}/>
     </div>
   );
 }

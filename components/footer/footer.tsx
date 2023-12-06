@@ -6,9 +6,16 @@ import twitterXIcon from "../../public/images/footer/twitterxIcon.svg";
 import upArrow from "../../public/images/footer/upChevron.png";
 import classes from "./footer.module.css";
 
-export default function Footer() {
+type FooterProps = {
+  mode: string;
+  modeStyles: Record<string, any>;
+}
+
+export default function Footer({mode, modeStyles}: FooterProps) {
+  const oppositeMode = mode === 'darkMode' ? 'lightMode' : 'darkMode';
+  const backgroundColor= modeStyles[oppositeMode].background;
   return (
-    <footer className={classes.footer}>
+    <footer className={classes.footer} style={{backgroundColor: backgroundColor}}>
       <ul className={classes.footerContainer}>
         <li className={classes.iconContainer}>
             <a href="https://github.com/T-J-D-Cavey" target="_blank">
