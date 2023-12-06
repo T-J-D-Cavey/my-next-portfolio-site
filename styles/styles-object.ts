@@ -5,7 +5,7 @@ export const modeStyles: Record<string, any> = {
       color: '#FAF9F6',
       background: '#121212',
       projectBackgroundOne: '#003b49',
-      projectBackgroundTwo: '#5d3754',
+      projectBackgroundTwo: '#333333',
       projectBackgroundThree: '#193652',
       projectBackgroundFour: '#1D2E2B',
     },
@@ -14,10 +14,10 @@ export const modeStyles: Record<string, any> = {
       secondaryButton: 'outline-dark',
       color: '#202020',
       background: '#fafafa',
-      projectBackgroundOne: '#C3E6EB',
-      projectBackgroundTwo: '#E1F8DC',
-      projectBackgroundThree: '#FFE7C7',
-      projectBackgroundFour: '#CAF1DE',
+      projectBackgroundOne: '#66CC66',
+      projectBackgroundTwo: '#4D94FF',
+      projectBackgroundThree: '#D8CCE4',
+      projectBackgroundFour: '#FFB366',
     },
   };
 
