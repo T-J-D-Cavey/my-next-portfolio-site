@@ -19,19 +19,19 @@ type formData = {
 type notificationData = {
   status: string | undefined;
   message: string | undefined;
-}
+};
 
 export default function ContactMe({ mode, modeStyles }: ContactMeProps) {
   const [status, setStatus] = useState<string | null>(null);
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
   let notificationData: notificationData = {
     status: undefined,
-    message: undefined
+    message: undefined,
   };
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
-    if(status === "error" || status === "success") {
+    if (status === "error" || status === "success") {
       timeoutId = setTimeout(() => {
         setStatus(null);
         setStatusMessage(null);
@@ -51,36 +51,43 @@ export default function ContactMe({ mode, modeStyles }: ContactMeProps) {
     }
 
     setStatus("success");
-    console.log(result.message)
+    console.log(result.message);
     return;
   }
 
-  if(status === 'pending') {
+  if (status === "pending") {
     notificationData = {
-      status: 'Sending',
-      message: 'Waiting for confirmation'
-    }
+      status: "Sending",
+      message: "Waiting for confirmation",
+    };
   }
 
-  if(status === 'success') {
+  if (status === "success") {
     notificationData = {
-      status: 'Success!',
-      message: 'I got your message. Thank you.'
-    }
+      status: "Success!",
+      message: "I got your message. Thank you.",
+    };
   }
 
-  if(status === 'error') {
+  if (status === "error") {
     notificationData = {
-      status: 'Error',
-      message: `Oh no. ${statusMessage}`
-    }
+      status: "Error",
+      message: `Oh no. ${statusMessage}`,
+    };
   }
 
   return (
     <section className={classes.formSection} id="contactID">
-      <h2>Contact me</h2>
-      {status && <Notification notificationData={notificationData}/>}
-      <ContactForm mode={mode} modeStyles={modeStyles} sendFormDataCaller={sendFormData} submitStatus={status}/>
+      <div className={classes.formContainer}>
+        <h2>Contact me</h2>
+        {status && <Notification notificationData={notificationData} />}
+        <ContactForm
+          mode={mode}
+          modeStyles={modeStyles}
+          sendFormDataCaller={sendFormData}
+          submitStatus={status}
+        />
+      </div>
     </section>
   );
 }

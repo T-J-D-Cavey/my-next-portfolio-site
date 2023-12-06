@@ -1,7 +1,14 @@
 .formSection {
+    height: 80dvh;
+    max-height: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer {
     width: 90%;
     position: relative;
-    margin: 4rem auto 2rem auto;
     max-width: 45rem;
 }
 
@@ -9,8 +16,6 @@
     font-size: 0.8rem;
     opacity: 0.5;
 }
-
-
 
 /* >>----> Notification styles: */
 

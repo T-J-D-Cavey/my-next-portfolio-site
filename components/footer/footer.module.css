@@ -5,6 +5,7 @@
     gap: 2rem;
     align-items: center;
     height: 20dvh;
+    max-height: 20rem;
     box-shadow: 0 -2px 40px var(--color-main-purple);
 }
 
