@@ -7,6 +7,8 @@ type HeroBannerProps = {
   modeStyles: Record<string, any>
 }
 
+// I need to look into using next link instead of all internal anchor tags in case it causes a re-render
+
 export default function HeroBanner({mode, modeStyles}: HeroBannerProps) {
 
     const ctaButton = modeStyles[mode].ctaButton;

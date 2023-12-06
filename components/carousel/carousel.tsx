@@ -1,12 +1,13 @@
 import Carousel from "react-bootstrap/Carousel";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import react_icon from '../../public/images/carousel/reactjs.png';
-import next_icon from '../../public/images/carousel/nextpurpleslide.png';
-import mongodb_icon from '../../public/images/carousel/mongodb.png';
-import bootstrap_icon from '../../public/images/carousel/bootstrap.png';
-import typescript_icon from '../../public/images/carousel/typescript.png';
-import github_icon from '../../public/images/carousel/githubslide.png';
+import react_icon from "../../public/images/carousel/reactjs.png";
+import next_icon from "../../public/images/carousel/nextpurpleslide.png";
+import mongodb_icon from "../../public/images/carousel/mongodb.png";
+import bootstrap_icon from "../../public/images/carousel/bootstrap.png";
+import typescript_icon from "../../public/images/carousel/typescript.png";
+import github_icon from "../../public/images/carousel/githubslide.png";
 import classes from "./carousel.module.css";
 
 type CarouselComponentProps = {
@@ -27,17 +28,20 @@ export default function CarouselComponent({
   const color = modeStyles[mode].color;
 
   return (
-    <section
-      className={classes.section}
-      id="projects"
-    >
+    <section className={classes.section} id="projects">
       <div className={classes.carousel_container}>
+        {/* <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} /> */}
         <div style={{ color: color }}>
           <h2>ABOUT THIS SITE:</h2>
         </div>
         <Carousel activeIndex={index} onSelect={handleSelect}>
           <Carousel.Item className={classes.item}>
-            <Image width={600} height={600} src={react_icon} alt="First slide" />
+            <Image
+              width={600}
+              height={600}
+              src={react_icon}
+              alt="First slide"
+            />
             <Carousel.Caption>
               <h3 style={{ color: color }}>Interactive and Dynamic</h3>
               <p style={{ color: color }}>
@@ -57,7 +61,12 @@ export default function CarouselComponent({
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className={classes.item}>
-            <Image width={600} height={600} src={mongodb_icon} alt="First slide" />
+            <Image
+              width={600}
+              height={600}
+              src={mongodb_icon}
+              alt="First slide"
+            />
             <Carousel.Caption>
               <h3 style={{ color: color }}>Back-End Data Storage</h3>
               <p style={{ color: color }}>
@@ -67,7 +76,12 @@ export default function CarouselComponent({
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className={classes.item}>
-            <Image width={600} height={600} src={bootstrap_icon} alt="First slide" />
+            <Image
+              width={600}
+              height={600}
+              src={bootstrap_icon}
+              alt="First slide"
+            />
             <Carousel.Caption>
               <h3 style={{ color: color }}>Sleek and Responsive</h3>
               <p style={{ color: color }}>
@@ -77,7 +91,12 @@ export default function CarouselComponent({
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className={classes.item}>
-            <Image width={600} height={600} src={typescript_icon} alt="First slide" />
+            <Image
+              width={600}
+              height={600}
+              src={typescript_icon}
+              alt="First slide"
+            />
             <Carousel.Caption>
               <h3 style={{ color: color }}>Optimised Development</h3>
               <p style={{ color: color }}>
@@ -87,7 +106,12 @@ export default function CarouselComponent({
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className={classes.item}>
-            <Image width={600} height={600} src={github_icon} alt="First slide" />
+            <Image
+              width={600}
+              height={600}
+              src={github_icon}
+              alt="First slide"
+            />
             <Carousel.Caption>
               <h3 style={{ color: color }}>Seamless Deployment</h3>
               <p style={{ color: color }}>
