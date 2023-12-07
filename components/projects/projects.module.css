@@ -67,6 +67,7 @@
   font-size: 1.2rem;
   margin-left: 0.3rem;
   margin-right: 0.3rem;
+  width: 5rem;
 }
 
 .seeDetails {
@@ -104,6 +105,12 @@
     padding: 0;
   }
 
+  .buttonMainContainer {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
   .buttonMainContainer button {
     margin-bottom: 0.5rem;
   }
@@ -128,15 +135,18 @@
   .projectsTextContainer {
     display: flex;
     flex-direction: column;
-    margin: 1rem auto;
   }
 
   .buttonMainContainer {
-    margin-top: -10rem;
+    margin-top: -8rem;
   }
 
   .mainContainer {
-    padding-bottom: 10rem;
+    padding-bottom: 8rem;
+  }
+
+  .projectsTextContainer h3 {
+    margin-top: -4.5rem;
   }
 }
 
