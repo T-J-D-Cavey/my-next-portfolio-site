@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Image from "next/image";
@@ -59,19 +60,19 @@ export default function MyWebDevBlog({
               onClick={handleShow}
               className={classes.projectButton}
             >
-              See details
+              Demo
             </Button>
             <Button
               variant={ctaButton}
               onClick={handleClose}
               className={classes.projectButton}
             >
-              <a
+              <Link
                 href="https://timandcarmen-ourwedding2024.netlify.app/"
                 target="_blank"
               >
-                Visit site
-              </a>
+                Site
+              </Link>
             </Button>
           </div>
         </div>
@@ -138,12 +139,12 @@ export default function MyWebDevBlog({
             onClick={handleClose}
             className={classes.projectButton}
           >
-            <a
+            <Link
               href="https://timandcarmen-ourwedding2024.netlify.app/"
               target="_blank"
             >
-              Visit site
-            </a>
+              Site
+            </Link>
           </Button>
         </Modal.Footer>
       </Modal>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import githubIcon from "../../public/images/footer/githubIcon.svg";
 import linkedInIcon from "../../public/images/footer/linkedInIcon.svg";
 import blogIcon from "../../public/images/footer/blogIcon.png";
@@ -18,30 +19,30 @@ export default function Footer({mode, modeStyles}: FooterProps) {
     <footer className={classes.footer} style={{backgroundColor: backgroundColor}}>
       <ul className={classes.footerContainer}>
         <li className={classes.iconContainer}>
-            <a href="https://github.com/T-J-D-Cavey" target="_blank">
+            <Link href="https://github.com/T-J-D-Cavey" target="_blank">
             <Image width={50} height={50} src={githubIcon} alt="Github icon"/>
-            </a>
+            </Link>
         </li>
         <li className={classes.iconContainer}>
-        <a href="https://uk.linkedin.com/in/timothy-cavey-69b453169" target="_blank">
+        <Link href="https://uk.linkedin.com/in/timothy-cavey-69b453169" target="_blank">
             <Image width={50} height={50} src={linkedInIcon} alt="LinkedIn icon"/>
-            </a>
+            </Link>
         </li>
         <li className={classes.iconContainer}>
-        <a href="https://my-web-dev-blog.vercel.app/" target="_blank">
+        <Link href="https://my-web-dev-blog.vercel.app/" target="_blank">
             <Image width={50} height={50} src={blogIcon} alt="Blog T icon"/>
-            </a>
+            </Link>
         </li>
         <li className={classes.iconContainer}>
-        <a href="https://twitter.com/TJDCavey" target="_blank">
+        <Link href="https://twitter.com/TJDCavey" target="_blank">
             <Image width={50} height={50} src={twitterXIcon} alt="Twitter X Icon"/>
-            </a>
+            </Link>
         </li>
       </ul>
       <div className={classes.iconContainer}>
-      <a href="#hi">
+      <Link href="#hi">
             <Image width={50} height={50} src={upArrow} alt=""/>
-            </a>
+            </Link>
       </div>
     </footer>
   );

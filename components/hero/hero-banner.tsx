@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
 import ParticlesComponent from './particles';
 import classes from './hero-banner.module.css'
@@ -6,8 +7,6 @@ type HeroBannerProps = {
   mode: string,
   modeStyles: Record<string, any>
 }
-
-// I need to look into using next link instead of all internal anchor tags in case it causes a re-render
 
 export default function HeroBanner({mode, modeStyles}: HeroBannerProps) {
 
@@ -23,10 +22,10 @@ export default function HeroBanner({mode, modeStyles}: HeroBannerProps) {
                     Web Developer.
                 </h1>
                 <Button variant={ctaButton} className={classes.button}>
-                  <a href='/#projects'>Show Me</a>
+                  <Link href='/#projects'>Show Me</Link>
                 </Button>
                 <Button variant={secondaryButton} className={classes.button}>
-                  <a href='/#contact'>Contact Me</a>
+                  <Link href='/#contact'>Contact Me</Link>
                 </Button>
                 <ParticlesComponent />
             </div>

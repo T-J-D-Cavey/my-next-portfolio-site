@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import Link from 'next/link';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Image from 'next/image';
@@ -49,10 +50,10 @@ type ProjectItemComponentProps = {
         <div className={classes.buttonMainContainer}>
 
         <Button variant={secondaryButton} onClick={handleShow} className={classes.projectButton}>
-          See details
+          Demo
         </Button>
         <Button variant={ctaButton} onClick={handleClose} className={classes.projectButton}>
-              <a href='https://xchange-cavey-app.netlify.app/' target='_blank'>Visit site</a>
+              <Link href='https://xchange-cavey-app.netlify.app/' target='_blank'>Site</Link>
         </Button>
         </div>
         </div>
@@ -67,9 +68,9 @@ type ProjectItemComponentProps = {
           <div className={classes.modalTextContainer}>
           <p>
               xChange connects to the{" "}
-              <a href="https://freecurrencyapi.com/docs" target="_blank">
+              <Link href="https://freecurrencyapi.com/docs" target="_blank">
                 Free currency API{" "}
-              </a>
+              </Link>
               for daily exchange rates of the world's top currencies. Choose any
               of the available base and target currencies and get that day's
               conversion rate. Use one of the inputs and the app will
@@ -100,7 +101,7 @@ type ProjectItemComponentProps = {
             Close
           </Button>
           <Button variant={ctaButton} onClick={handleClose} className={classes.projectButton}>
-            <a href='https://xchange-cavey-app.netlify.app/' target='_blank'>Visit site</a>
+            <Link href='https://xchange-cavey-app.netlify.app/' target='_blank'>Site</Link>
           </Button>
         </Modal.Footer>
       </Modal>
