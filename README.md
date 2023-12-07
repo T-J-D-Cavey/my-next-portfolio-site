@@ -1,6 +1,6 @@
 # Portfolio Site
 
-<a href="tbc">Visit site here</a> 
+<a href="https://tim-cavey-portfolio.vercel.app/">Visit site here</a> 
 
 Welcome to my Portfolio Site! This repository serves as a showcase of my web development skills, highlighting my ability to create interactive, functional, responsive, and visually appealing websites. 
 
@@ -85,7 +85,7 @@ Open your browser and visit: http://localhost:3000
 
 ## Contact
 
-Thank you for visiting my Portfolio Site! Feel free to connect with me using the contact form on the <a href="tbc">portfolio site here</a>, or any of the other channels listed in the footer. Feel free to explore my GitHub repository for more of my work and contributions.
+Thank you for visiting my Portfolio Site! Feel free to connect with me using the contact form on the <a href="https://tim-cavey-portfolio.vercel.app/">portfolio site here</a>, or any of the other channels listed in the footer. Feel free to explore my GitHub repository for more of my work and contributions.
 
 I hope you enjoy exploring the site. If you have any questions or would like to collaborate, please don't hesitate to reach out.
 
