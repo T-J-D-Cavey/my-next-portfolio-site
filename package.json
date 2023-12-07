@@ -1,6 +1,6 @@
 {
-  "name": "my-next-portfolio",
-  "version": "0.1.0",
+  "name": "my-next-portfolio-site",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
