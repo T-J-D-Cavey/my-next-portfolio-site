@@ -13,12 +13,10 @@ export const modeStyles: Record<string, any> = {
       ctaButton: 'dark',
       secondaryButton: 'outline-dark',
       color: '#202020',
-      background: '#fafafa',
-      projectBackgroundOne: '#66CC66',
-      projectBackgroundTwo: '#1EE8E5',
-      projectBackgroundThree: '#EA69EA',
-      projectBackgroundFour: '#FFB366',
+      background: '#faf8ff',
+      projectBackgroundOne: '#BBD9E8',
+      projectBackgroundTwo: '#CCE9D0',
+      projectBackgroundThree: '#B2CCFF',
+      projectBackgroundFour: '#FFE0CC',
     },
   };
-
-  // I need to improve lightmode background colours
