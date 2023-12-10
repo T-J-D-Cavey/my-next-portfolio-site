@@ -96,7 +96,7 @@ export default function MyWebDevBlog({
               to contribute to our honeymoon fund. This site is written in
               English and Mandarin, and uses the i18next library to allow the
               user to switch language at the tap of a button. The site is
-              password protectect, using local storage to ensure the guest only
+              password protected, using local storage to ensure the guest only
               has to submit the password correctly once. Wedding bells sound
               effects will great your first visit, and framer motion scroll
               animations with bootstrap modals ensure a pleasant visit.
