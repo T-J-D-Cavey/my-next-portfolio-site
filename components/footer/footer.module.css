@@ -4,7 +4,7 @@
     justify-content: center;
     gap: 2rem;
     align-items: center;
-    height: 20dvh;
+    height: 20svh;
     max-height: 20rem;
     box-shadow: 0 -2px 40px var(--color-main-purple);
 }
