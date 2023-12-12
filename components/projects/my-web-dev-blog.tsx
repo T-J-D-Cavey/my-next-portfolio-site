@@ -31,11 +31,12 @@ export default function MyWebDevBlog({
       <section className={classes.projectSection}>
         <div className={classes.mainContainer}>
           <div className={classes.projectTextAndImageContainer}>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
-              className={classes.projectsTextContainer}>
+              className={classes.projectsTextContainer}
+            >
               <h3>My Web Dev Blog</h3>
               <div>
                 <p>
@@ -50,11 +51,12 @@ export default function MyWebDevBlog({
                 </ul>
               </div>
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }} 
-              className={classes.projectPicMainContainer}>
+              transition={{ duration: 1 }}
+              className={classes.projectPicMainContainer}
+            >
               <Image
                 width={600}
                 height={1000}
@@ -64,11 +66,12 @@ export default function MyWebDevBlog({
               />
             </motion.div>
           </div>
-          <motion.div 
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }} 
-              className={classes.buttonMainContainer}>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className={classes.buttonMainContainer}
+          >
             <Button
               variant={secondaryButton}
               onClick={handleShow}
@@ -109,10 +112,10 @@ export default function MyWebDevBlog({
               full-stack capabilities. It has two API routes. One for handling
               email addresses for signing up to my newsletter, the other for a
               contact form. User input is validated on the client and server.
-              Data safely stored on a MongoDB database using Node.js. Articles have
-              React Syntax Highlighter for displaying attractive code snippets
-              within dynamically generated blog articles written in markdown and
-              converted using React Markdown.
+              Data safely stored on a MongoDB database using Node.js. Articles
+              have React Syntax Highlighter for displaying attractive code
+              snippets within dynamically generated blog articles written in
+              markdown and converted using React Markdown.
             </p>
             <div className={classes.modalPicContainer}>
               <Image

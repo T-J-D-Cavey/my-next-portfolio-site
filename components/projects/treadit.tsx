@@ -3,6 +3,7 @@ import Link from "next/link";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import mobileOne from "../../public/images/projectimages/treadit_1.png";
 import mobileTwo from "../../public/images/projectimages/treadit_2.png";
 import classes from "./projects.module.css";
@@ -30,7 +31,11 @@ export default function MyWebDevBlog({
       <section className={classes.projectSection}>
         <div className={classes.mainContainer}>
           <div className={classes.projectTextAndImageContainer}>
-            <div className={classes.projectsTextContainer}>
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              className={classes.projectsTextContainer}>
               <h3>Treadit</h3>
               <div>
                 <p>
@@ -44,8 +49,12 @@ export default function MyWebDevBlog({
                   <li>Jest and Cypress testing</li>
                 </ul>
               </div>
-            </div>
-            <div className={classes.projectPicMainContainer}>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }} 
+              className={classes.projectPicMainContainer}>
               <Image
                 width={600}
                 height={1000}
@@ -53,9 +62,13 @@ export default function MyWebDevBlog({
                 src={mobileOne}
                 alt="homeage banner and nav bar"
               />
-            </div>
+            </motion.div>
           </div>
-          <div className={classes.buttonMainContainer}>
+          <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }} 
+              className={classes.buttonMainContainer}>
             <Button
               variant={secondaryButton}
               onClick={handleShow}
@@ -72,7 +85,7 @@ export default function MyWebDevBlog({
                 Site
               </Link>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
       <Modal show={show} onHide={handleClose}>

@@ -16,8 +16,6 @@ export default function Home() {
     setMode(oppositeMode);
   }
 
-  // Should add framer motion scroll events to this
-
   const backgroundColor = modeStyles[mode].background;
   const color = modeStyles[mode].color;
   return (
