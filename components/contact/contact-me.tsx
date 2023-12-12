@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { postData } from "../../utils/fetch";
+import { motion } from "framer-motion";
 import ContactForm from "./contact-form";
 import Notification from "./notifcation";
 import classes from "./contact-form.module.css";
@@ -78,7 +79,12 @@ export default function ContactMe({ mode, modeStyles }: ContactMeProps) {
 
   return (
     <section className={classes.formSection} id="contact">
-      <div className={classes.formContainer}>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        className={classes.formContainer}
+      >
         <h2>Contact me</h2>
         {status && <Notification notificationData={notificationData} />}
         <ContactForm
@@ -87,7 +93,7 @@ export default function ContactMe({ mode, modeStyles }: ContactMeProps) {
           sendFormDataCaller={sendFormData}
           submitStatus={status}
         />
-      </div>
+      </motion.div>
     </section>
   );
 }
