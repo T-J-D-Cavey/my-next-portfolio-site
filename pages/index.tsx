@@ -31,3 +31,8 @@ export default function Home() {
     </div>
   );
 }
+
+// I have added these to allow framer motion scroll events. Will hope to remove if a better workaround is found:
+function getStaticProps() {}
+
+function getStaticPaths() {}

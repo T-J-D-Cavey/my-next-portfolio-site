@@ -1,5 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import react_icon from "../../public/images/carousel/reactjs.png";
 import next_icon from "../../public/images/carousel/nextpurpleslide.png";
@@ -28,7 +29,11 @@ export default function CarouselComponent({
 
   return (
     <section className={classes.section} id="projects">
-      <div className={classes.carousel_container}>
+      <motion.div
+              initial={{ opacity: 0, scale: 0.7 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+        className={classes.carousel_container}>
         <div style={{ color: color }}>
           <h2>ABOUT THIS SITE:</h2>
         </div>
@@ -119,7 +124,7 @@ export default function CarouselComponent({
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-      </div>
+      </motion.div>
     </section>
   );
 }
