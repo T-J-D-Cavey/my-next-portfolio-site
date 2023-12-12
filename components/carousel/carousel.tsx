@@ -30,10 +30,11 @@ export default function CarouselComponent({
   return (
     <section className={classes.section} id="projects">
       <motion.div
-              initial={{ opacity: 0, scale: 0.7 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-        className={classes.carousel_container}>
+        initial={{ opacity: 0, scale: 0.7 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        className={classes.carousel_container}
+      >
         <div style={{ color: color }}>
           <h2>ABOUT THIS SITE:</h2>
         </div>
