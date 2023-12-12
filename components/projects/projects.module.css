@@ -2,6 +2,7 @@
   max-width: 50rem;
   margin: 0 auto;
   padding: 2rem 0;
+  overflow: hidden;
 }
 
 .mainContainer {
@@ -41,9 +42,9 @@
   line-height: 1.5rem;
 }
 
-.projectsTextContainer, .projectTextAndImageContainer, .buttonMainContainer {
+/* .projectsTextContainer, .projectTextAndImageContainer, .buttonMainContainer {
   overflow: hidden;
-}
+} */
 
 /* --------> Project modal styles: */
 
