@@ -23,7 +23,7 @@ Enjoy dynamic components, scroll events and pretty visual effects for an immersi
 
 ### Stylish Design
 
-Meticulously designed with attention to detail, the portfolio site boasts a modern interface. Carefully selected color palettes and typography create a enjoyable and accesible visual experience.
+Meticulously designed with attention to detail, the portfolio site boasts a modern interface. Carefully selected color palettes and typography create a enjoyable and accessible visual experience.
 
 ## Technologies Used
 
